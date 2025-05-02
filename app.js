@@ -68,4 +68,13 @@ function neverRun(): never {
 neverRun()
 console.log('never is in');
 
+*/
+/*
+----
+
+type inference
+- understanding type inference
+- type annotations
+
+----
 */ 

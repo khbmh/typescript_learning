@@ -1,9 +1,9 @@
 
-// basic types 
+// basic types
 /*
 -- primitives
-number 
-string 
+number
+string
 boolean
 
 -- reference
@@ -70,3 +70,85 @@ neverRun()
 console.log('never is in');
 
 */
+
+
+
+/*
+----
+
+type inference
+- understanding type inference
+- type annotations
+
+----
+*/
+/*
+// when type is not told, tsc will infer the type by itself - inference
+let a = 21;
+// providing the type - annotation
+let b: string | boolean
+
+b = 'egg';
+
+*/
+
+
+/*
+-----
+-
+    interface and type aliases
+- defining interfaces
+- using interfaces to define object shapes
+- extending interfaces
+- type aliases
+- intersection types
+-
+-----
+*/
+/*
+// interface - structure of an object
+
+interface user {
+  name: string
+  email: string
+  age?: number // it's not must have
+  password: string
+}
+// obj structure should be like user
+function something(obj: user) {
+  obj.email
+}
+
+// extending interface
+interface admin extends user {
+  isAdmin: boolean
+}
+// both interfaces are to be identical
+interface agent extends user { }
+
+// multiple interfaces having same name are merged
+interface sportsman {
+  name: string
+}
+interface sportsman {
+  sport: string
+}
+
+function playNow(obj: sportsman) {
+  obj.name
+  obj.sport
+}
+
+
+// type aliases
+// union type
+type id = number | string | null
+
+let userId: id;
+
+// intersection type
+
+*/
+
+
+// https://youtu.be/lVzb6pmel_E?t=4930&feature=shared
