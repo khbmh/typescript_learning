@@ -199,4 +199,39 @@ console.log(bun);
 cls - obj : public private ; access modifier
 
 */
-//https://youtu.be/lVzb6pmel_E?t=7359&feature=shared
+/*
+class Baker {
+  constructor(private name: string) {
+
+  }
+}
+
+let bun = new Baker('Pizza')
+bun.name = 'Butter'
+console.log(bun);
+
+// protected
+class shoeMaker {
+  private name = 'Apex'
+  protected organ = 'Leg'
+}
+
+
+class leatherShoe extends shoeMaker {
+  public material = 'leather'
+
+  modify() {
+    this.name = 'walker' // public shows error
+    this.organ = 'knee' // protected doesn't show error
+  }
+}
+
+let boyS = new leatherShoe()
+boyS.modify()
+console.log(boyS);
+
+boyS.organ = 'hand'
+boyS.name = 'odheek'
+console.log(boyS);
+
+*/
