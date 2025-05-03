@@ -151,4 +151,66 @@ let userId: id;
 */
 
 
-// https://youtu.be/lVzb6pmel_E?t=4930&feature=shared
+/*
+---
+classes and objects
+---
+
+*/
+/*
+class device {
+  brand = 'xiaomi';
+  price = 87490
+}
+
+let myPhone = new device()
+// console.log(myPhone);
+// console.log(device);
+
+*/
+// constructor - not a bottle - bottle maker
+/*
+class Person {
+  isAlive = true
+  constructor(public name: string, public age: number, public height: number = 5.6, public hobby: string) {
+    if (!height) {
+      this.height = 5.6
+    }
+  }
+}
+
+let alex = new Person('alex', 33, 0, 'cycling')
+
+console.log(alex);
+
+let john = new Person('John', 23, 5.8, 'reading')
+
+console.log(john);
+
+*/
+
+
+// this - inside a class, this means the class itself, when a try to access a variable made inside that class
+/*
+class Baker {
+  public name;
+  constructor(name: string) {
+    this.name = name;
+  }
+}
+
+let bun = new Baker('bun')
+
+console.log(bun);
+
+*/
+
+
+/*
+
+cls - obj : public private ; access modifier
+
+*/
+//https://youtu.be/lVzb6pmel_E?t=7359&feature=shared
+
+

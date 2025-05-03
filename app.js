@@ -1,5 +1,5 @@
 "use strict";
-// basic types 
+// basic types
 /*
 -- primitives
 number
@@ -77,4 +77,126 @@ type inference
 - type annotations
 
 ----
-*/ 
+*/
+/*
+// when type is not told, tsc will infer the type by itself - inference
+let a = 21;
+// providing the type - annotation
+let b: string | boolean
+
+b = 'egg';
+
+*/
+/*
+-----
+-
+    interface and type aliases
+- defining interfaces
+- using interfaces to define object shapes
+- extending interfaces
+- type aliases
+- intersection types
+-
+-----
+*/
+/*
+// interface - structure of an object
+
+interface user {
+  name: string
+  email: string
+  age?: number // it's not must have
+  password: string
+}
+// obj structure should be like user
+function something(obj: user) {
+  obj.email
+}
+
+// extending interface
+interface admin extends user {
+  isAdmin: boolean
+}
+// both interfaces are to be identical
+interface agent extends user { }
+
+// multiple interfaces having same name are merged
+interface sportsman {
+  name: string
+}
+interface sportsman {
+  sport: string
+}
+
+function playNow(obj: sportsman) {
+  obj.name
+  obj.sport
+}
+
+
+// type aliases
+// union type
+type id = number | string | null
+
+let userId: id;
+
+// intersection type
+
+*/
+/*
+---
+classes and objects
+---
+
+*/
+/*
+class device {
+  brand = 'xiaomi';
+  price = 87490
+}
+
+let myPhone = new device()
+// console.log(myPhone);
+// console.log(device);
+
+*/
+// constructor - not a bottle - bottle maker
+/*
+class Person {
+  isAlive = true
+  constructor(public name: string, public age: number, public height: number = 5.6, public hobby: string) {
+    if (!height) {
+      this.height = 5.6
+    }
+  }
+}
+
+let alex = new Person('alex', 33, 0, 'cycling')
+
+console.log(alex);
+
+let john = new Person('John', 23, 5.8, 'reading')
+
+console.log(john);
+
+*/
+// this - inside a class, this means the class itself, when a try to access a variable made inside that class
+/*
+class Baker {
+  public name;
+  constructor(name: string) {
+    this.name = name;
+  }
+}
+
+let bun = new Baker('bun')
+
+console.log(bun);
+
+*/
+/*
+
+cls - obj : public private ; access modifier
+
+*/
+//https://youtu.be/lVzb6pmel_E?t=7359&feature=shared
