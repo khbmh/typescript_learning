@@ -344,3 +344,22 @@ class folder {
 
 console.log(folder.version);
 */
+/*
+-----
+----  Abstract classes
+-----
+*/
+//abstract classes cannot be instantiated and are meant to be extended.
+// class that are extended , no use without extension
+/*
+class cookingEssential {
+  constructor(protected gas: number, protected pot: string) { }
+}
+
+class biriyani extends cookingEssential {
+  constructor(gas: number, pot: string, private rice: number, private isKacchi: boolean) {
+    super(gas, pot)
+  }
+}
+
+*/
