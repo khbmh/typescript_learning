@@ -250,37 +250,119 @@ console.log(boyS);
 */
 
 
+/*
+
+      class and object
+
+*/
+// readonly - in future you don't want to change
+
+/*
+class Teacher {
+  constructor(public readonly name: string) {
+  }
+  changeName() {
+    this.name = 'no' // gave error - but code will be executed
+  }
+}
+
+let me = new Teacher('ales')
 
 
+me.changeName()
+
+console.log(me);
+
+*/
+
+// - optional properties - providing is optional
+/*
+class Human {
+  constructor(public name: string, public age?: number) { }
+}
+
+let Huki = new Human('huki')
+console.log(Huki);
+
+*/
+// normal properties -
+/*
+class user {
+  public name;
+  public age;
+  constructor(name: string, age: number) {
+    this.name = name
+    this.age = age
+  }
+}
+
+// parameter properties -
+
+class Human {
+  constructor(public name: string, public age?: number) { }
+}
+*/
 
 
+/*
 
+getters and setters
 
+*/
+/*
+class Human {
+  constructor(public name: string, public age?: number) { }
+  getName() {
+    return this.name
+  }
+  setName(value: string) {
+    return this.name = value
+  }
+}
 
+let Huki = new Human('huki')
+console.log(Huki.setName('khuki'));
 
+*/
 
+// get and set
+/*
+class user {
+  constructor(public _name: string) { }
 
+  get name() {
+    return this._name
+  }
 
+  set name(value) {
+    this._name = value
+  }
+}
 
+let u1 = new user(
+  'mango'
+)
 
+console.log(u1.name);
+u1.name = 'coconut'
+console.log(u1.name);
+*/
 
+/*
+-----
+static members
+-------
+*/
+// can't get in instances or can access without instance
+/*
+class folder {
+  static version = 1.2
 
+  static getRandomNum() {
+    return Math.random()
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(folder.version);
+*/
 
