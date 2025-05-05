@@ -388,16 +388,93 @@ class biriyani extends cookingEssential {
 
 
 
+/*
+-------
+-----   functions
+-------
+- types
+- optional and default parameter
+- rest parameters
+- overloads
+-------
+*/
+// void - not returning anything
+/*
+function dove(): void {
+  console.log(
+    'no return'
+  );
+}
+
+function callBack(name: string, age: number, cb: (arg: string) => void) {
+  cb('hello')
+}
+
+callBack('john', 22, (arg: string) => {
+  console.log(
+    'je'
+  );
+})
+
+callBack('john', 22, (_arg: string) => {
+  console.log('je');
+});
+/*
+The underscore (_arg) signals:
+
+"Yes, I acknowledge this parameter is expected, but I'm choosing not to use it."
+*/
+
+// optional parameter
+/*
+function opPara(name: string, age?: number) {
+  console.log(name, age);
+}
+// trade off - optional and default value
+function pPara(name: string, age: number = 11) {
+  console.log(name, age);
+}
+
+pPara('john')
+
+**/
 
 
+// ... rest/spread
+/*
+function sum(...arr: number[]) {
+  console.log(arr);
+}
+sum(1, 34, 22, 56, 3, 2, 5)
 
 
+function fruits(...fruits: string[]) {
+  console.log(fruits);
+}
+fruits('mango', 'coconut', 'guava', 'watermelon')
+*/
 
+// overloads
 
+function combine(a: string): void
+function combine(a: string, b: number): void
 
+function combine(a: any, b: any) {
+  if (typeof a === 'string' && b === undefined) {
+    console.log(
+      'hat'
+    );
 
+  }
+  else if (typeof a === 'string' && typeof b === 'number') {
+    console.log(
+      343
+    );
 
+  }
+  else console.log("it's not us, it's you.")
+}
 
-
-
-
+combine('mango')
+combine('mango', 33)
+combine('mango', 'di')
