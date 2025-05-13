@@ -455,7 +455,7 @@ fruits('mango', 'coconut', 'guava', 'watermelon')
 */
 
 // overloads
-
+/*
 function combine(a: string): void
 function combine(a: string, b: number): void
 
@@ -478,3 +478,61 @@ function combine(a: any, b: any) {
 combine('mango')
 combine('mango', 33)
 combine('mango', 'di')
+
+*/
+
+// generics - function - takes any argument (not :any) type dynamically in a type safe way
+/*
+function gen<T>(a:T){
+  console.log(a);
+}
+function gen<T>(a:T): T{
+  return <T>"hey"
+}
+
+gen<string>('hello')
+gen<number>(33)
+*/
+
+// generics - interface
+/*
+interface ApiResponse<T> {
+  data: T;
+  success: boolean;
+}
+
+const response: ApiResponse<string[]> = {
+  data: ['mango', 'hello'],
+  success: true
+}
+const response2: ApiResponse<number[]> = {
+  data: [44, 22],
+  success: true
+}
+
+*/
+
+// generic - class 
+
+/*
+class Human<T> {
+  constructor(public name: T, public age?: number) { }
+}
+const alex = new Human<string>('alex')
+console.log(alex);
+const john = new Human<number>(1)
+console.log(john);
+
+*/
+
+
+// export - import
+import { information, infoMe } from "./info";
+
+console.log(information.age, infoMe.name);
+
+// default - export import
+// no curly braces
+import info from "./info";
+const myInfo = new info('alex')
+console.log(myInfo);
