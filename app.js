@@ -14,10 +14,6 @@ tuples
 enums - enumeration
 any, unknown, void, null, undefined, never
 */
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
 /*
 let z = 'name'
 let b = true;
@@ -495,11 +491,53 @@ const john = new Human<number>(1)
 console.log(john);
 
 */
+/*
 // export - import
-const info_1 = require("./info");
-console.log(info_1.information.age, info_1.infoMe.name);
+import { information, infoMe } from "./info";
+
+console.log(information.age, infoMe.name);
+
 // default - export import
 // no curly braces
-const info_2 = __importDefault(require("./info"));
-const myInfo = new info_2.default('alex');
+import info from "./info";
+const myInfo = new info('alex')
 console.log(myInfo);
+*/
+/*
+
+type assertion - type casting
+
+-- when type of a value is better known by me than typescript
+*/
+/*
+let a: any = 22
+console.log(typeof a);
+console.log(<number>a)
+console.log(typeof a);
+
+// type casting
+let b = Number('33')
+console.log(typeof b);
+
+// not null assertion
+let c: null | undefined | string;
+c = 'mah'
+c!.charAt(3) // ! not null assertion
+
+*/
+/*
+type guard - type of  | instanceof
+*/
+function abc(arg) {
+    if (typeof arg === 'string') {
+        console.log('string');
+    }
+    else if (typeof arg === 'number') {
+        console.log('number');
+    }
+    else {
+        throw new Error('ew era no noom');
+    }
+}
+abc('alex');
+abc(3);

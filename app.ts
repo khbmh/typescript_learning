@@ -525,7 +525,7 @@ console.log(john);
 
 */
 
-
+/*
 // export - import
 import { information, infoMe } from "./info";
 
@@ -536,3 +536,51 @@ console.log(information.age, infoMe.name);
 import info from "./info";
 const myInfo = new info('alex')
 console.log(myInfo);
+*/
+
+
+/*
+
+type assertion - type casting
+
+-- when type of a value is better known by me than typescript
+*/
+
+/*
+let a: any = 22
+console.log(typeof a);
+console.log(<number>a)
+console.log(typeof a);
+
+// type casting
+let b = Number('33')
+console.log(typeof b);
+
+// not null assertion
+let c: null | undefined | string;
+c = 'mah'
+c!.charAt(3) // ! not null assertion
+
+*/
+
+
+
+/*
+type guard - type of  | instanceof
+*/
+
+function abc(arg: string | number) {
+  if (typeof arg === 'string') {
+    console.log('string');
+  } else if (typeof arg === 'number') {
+    console.log('number');
+  } else {
+    throw new Error(
+      'ew era no noom'
+    )
+  }
+}
+
+abc('alex')
+abc(3)
+
